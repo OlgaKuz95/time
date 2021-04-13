@@ -2,12 +2,16 @@ package  ru.netology
 
 fun main() {
 
-    //val lastTime = 360
+    val sec = 0..60
+    val minute = 61..60 * 60
+    val hour = 60 * 60 + 1..24 * 60 * 60
+    val oneDay = 24 * 60 * 60 + 1..24 * 60 * 60 * 2
+    val twoDay = 24 * 60 * 60 * 2 + 1..24 * 60 * 60 * 3
+    val threeDay = 24 * 60 * 60 * 3 + 1
+    val lastTime = 3601
+    val timeSeveral = 10
 
-
-
-
-    val result = agoToText()
+    val result = agoToText(lastTime, timeSeveral, sec, minute, hour, oneDay, twoDay, threeDay)
     println("   $result")
 
 
@@ -16,14 +20,14 @@ fun main() {
 
 fun agoToText(
 
-    lastTime: Int= 56,
-    timeSeveral: Int= 10,
-    sec: IntRange = 0..60,
-    minute: IntRange= 61..60 * 60,
-    hour: IntRange = 60 * 60 + 1..24 * 60 * 60,
-    oneDay: IntRange= 24 * 60 * 60 + 1..24 * 60 * 60 * 2,
-    twoDay: IntRange= 24 * 60 * 60 * 2 + 1..24 * 60 * 60 * 3,
-    threeDay: Int= 24 * 60 * 60 * 3 + 1,
+    lastTime: Int,
+    timeSeveral: Int,
+    sec: IntRange,
+    minute: IntRange,
+    hour: IntRange,
+    oneDay: IntRange,
+    twoDay: IntRange,
+    threeDay: Int,
 
 
     ) {
